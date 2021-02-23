@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class InputsPage extends StatefulWidget {
   @override
@@ -10,6 +11,11 @@ class _InputsPageState extends State<InputsPage> {
   String email = '';
   String password = '';
   String numero = '';
+  String fechaSeleccionada = '';
+  String itemSeleccion = 'Azul';
+
+  final listaItems = ['Azul', 'Rojo', 'Negro', 'Verde', 'Amarillo', ''];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +35,11 @@ class _InputsPageState extends State<InputsPage> {
           Divider(),
           Text(numero),
           _crearInputNumerico(),
+          Divider(),
+          Text(fechaSeleccionada),
+          _crearDateInput(context),
+          Divider(),
+          _crearDropdown(),
           SizedBox(
             height: 50,
           )
@@ -98,5 +109,62 @@ class _InputsPageState extends State<InputsPage> {
         setState(() {});
       },
     );
+  }
+
+  Widget _crearDateInput(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+          labelText: 'Fecha',
+          hintText: 'Fecha',
+          helperText: 'Fecha',
+          icon: Icon(Icons.biotech_rounded)),
+      onTap: () {
+        FocusScope.of(context).requestFocus(new FocusNode());
+        _abrirDatePicker(context);
+      },
+    );
+  }
+
+  void _abrirDatePicker(BuildContext context) async {
+    DateTime fecha = await showDatePicker(
+        context: context,
+        initialDate: new DateTime.now(),
+        firstDate: new DateTime(2020),
+        lastDate: new DateTime(2025));
+
+    if (fecha != null) {
+      DateFormat dateFormat = DateFormat('dd/MM/yyyy');
+      fechaSeleccionada = dateFormat.format(fecha);
+      setState(() {});
+    }
+  }
+
+  Widget _crearDropdown() {
+    return Row(
+      children: [
+        Expanded(
+          child: DropdownButton(
+            value: itemSeleccion,
+            items: _crearItemsDropdown(),
+            onChanged: (opcion) {
+              itemSeleccion = opcion;
+              setState(() {});
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  List<DropdownMenuItem> _crearItemsDropdown() {
+    List<DropdownMenuItem<String>> items = List();
+    listaItems.forEach((s) {
+      final item = DropdownMenuItem(
+        child: Text(s),
+        value: s,
+      );
+      items.add(item);
+    });
+    return items;
   }
 }
