@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_basicos/src/pages/animacion_page.dart';
-
-import 'package:widgets_basicos/src/pages/routes/routes.dart';
+import 'package:widgets_basicos/src/routes/routes.dart';
 
 void main() => runApp(MyApp());
 
