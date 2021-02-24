@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: '/',
+      initialRoute: 'contactos',
       routes: getRoutes(),
       onGenerateRoute: (RouteSettings settings) {
         print('Ruta llamada ${settings.name}');
