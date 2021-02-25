@@ -39,6 +39,11 @@
         "path" : "infinite-scroll",
         "icon" : "accessibility",
         "texto": "Infinite Scroll"
+      },
+      {
+        "path" : "lista-pokemon",
+        "icon" : "accessibility",
+        "texto": "Pokemon"
       }
   ]
 }
