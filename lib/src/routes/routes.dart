@@ -5,6 +5,7 @@ import 'package:widgets_basicos/src/pages/cards_page.dart';
 import 'package:widgets_basicos/src/pages/contactos_page.dart';
 import 'package:widgets_basicos/src/pages/fade_in_image_page.dart';
 import 'package:widgets_basicos/src/pages/imagenes_page.dart';
+import 'package:widgets_basicos/src/pages/infinite_scroll_page.dart';
 import 'package:widgets_basicos/src/pages/inputs_page.dart';
 import 'package:widgets_basicos/src/pages/listas_page.dart';
 import 'package:widgets_basicos/src/pages/menu_page.dart';
@@ -24,5 +25,6 @@ Map<String, WidgetBuilder> getRoutes() {
     'inputs': (BuildContext context) => InputsPage(),
     'lists': (BuildContext context) => ListasPage(),
     'fade-in': (BuildContext context) => FadeInImagePage(),
+    'infinite-scroll': (BuildContext context) => InfiniteScrollPage(),
   };
 }
