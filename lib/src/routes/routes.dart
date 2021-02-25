@@ -3,6 +3,7 @@ import 'package:widgets_basicos/src/pages/alert_page.dart';
 import 'package:widgets_basicos/src/pages/animacion_page.dart';
 import 'package:widgets_basicos/src/pages/cards_page.dart';
 import 'package:widgets_basicos/src/pages/contactos_page.dart';
+import 'package:widgets_basicos/src/pages/fade_in_image_page.dart';
 import 'package:widgets_basicos/src/pages/imagenes_page.dart';
 import 'package:widgets_basicos/src/pages/inputs_page.dart';
 import 'package:widgets_basicos/src/pages/listas_page.dart';
@@ -22,5 +23,6 @@ Map<String, WidgetBuilder> getRoutes() {
     'animation': (BuildContext context) => AnimacionPage(),
     'inputs': (BuildContext context) => InputsPage(),
     'lists': (BuildContext context) => ListasPage(),
+    'fade-in': (BuildContext context) => FadeInImagePage(),
   };
 }

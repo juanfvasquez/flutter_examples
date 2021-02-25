@@ -29,6 +29,11 @@
           "path" : "lists",
           "icon" : "list",
           "texto": "Listas"
-      }
+      },
+      {
+        "path" : "fade-in",
+        "icon" : "accessibility",
+        "texto": "FadeIn Images"
+    }
   ]
 }
