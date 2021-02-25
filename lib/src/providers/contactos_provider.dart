@@ -7,7 +7,6 @@ class _ContactosProvider {
 
   Future<List<dynamic>> leerContactos() async {
     final resp = await rootBundle.loadString('data/contactos.json');
-    print(resp);
     Map data = json.decode(resp);
     contactos = data['contactos'];
     return contactos;

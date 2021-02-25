@@ -1,0 +1,34 @@
+{
+  "menu" : [
+      {
+          "path" : "alerts",
+          "icon" : "add_alert",
+          "texto": "Alertas"
+      },
+      {
+          "path" : "images",
+          "icon" : "accessibility",
+          "texto": "Imágenes"
+      },
+      {
+          "path" : "cards",
+          "icon" : "folder_open",
+          "texto": "Cards - Tarjetas"
+      },
+      {
+          "path" : "animation",
+          "icon" : "donut_large",
+          "texto": "Animación"
+      },
+      {
+          "path" : "inputs",
+          "icon" : "input",
+          "texto": "Inputs"
+      },
+      {
+          "path" : "lists",
+          "icon" : "list",
+          "texto": "Listas"
+      }
+  ]
+}
