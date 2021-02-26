@@ -12,6 +12,7 @@ import 'package:widgets_basicos/src/pages/listas_page.dart';
 import 'package:widgets_basicos/src/pages/menu_page.dart';
 import 'package:widgets_basicos/src/pages/navegacion_1_page.dart';
 import 'package:widgets_basicos/src/pages/navegacion_2_page.dart';
+import 'package:widgets_basicos/src/pages/slider_page.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -28,5 +29,6 @@ Map<String, WidgetBuilder> getRoutes() {
     'fade-in': (BuildContext context) => FadeInImagePage(),
     'infinite-scroll': (BuildContext context) => InfiniteScrollPage(),
     'lista-pokemon': (BuildContext context) => ListaPokemonPage(),
+    'slider': (BuildContext context) => SliderPage(),
   };
 }

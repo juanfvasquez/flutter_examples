@@ -6,4 +6,9 @@ class Contacto {
     this.nombre = nombre;
     this.telefono = telefono;
   }
+
+  Contacto.fromJson(Map<String, String> datos) {
+    this.nombre = datos['nombre'];
+    this.telefono = datos['telefono'];
+  }
 }

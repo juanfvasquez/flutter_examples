@@ -10,6 +10,7 @@ class ImagenesPage extends StatelessWidget {
     "https://cdn.pixabay.com/photo/2016/11/08/05/26/woman-1807533_960_720.jpg",
     "https://cdn.pixabay.com/photo/2013/11/28/10/03/autumn-219972_960_720.jpg",
     "https://cdn.pixabay.com/photo/2017/12/17/19/08/away-3024773_960_720.jpg",
+    "https://cdn.pixabay.com/photo/2017/12/17/19/08/away-3024773.jpg",
   ];
 
   @override
@@ -38,7 +39,16 @@ class ImagenesPage extends StatelessWidget {
   Widget _imagenesUrl() {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
-        return Image.network(listaImagenes[index]);
+        return FadeInImage(
+          image: NetworkImage(listaImagenes[index]),
+          placeholder: AssetImage('assets/img/loading.gif'),
+          fadeInDuration: Duration(milliseconds: 200),
+          fadeInCurve: Curves.fastOutSlowIn,
+          imageErrorBuilder:
+              (BuildContext context, Object error, StackTrace trace) {
+            return Image.asset('assets/img/image_error.png');
+          },
+        );
       },
       itemCount: listaImagenes.length,
     );

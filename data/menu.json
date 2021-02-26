@@ -44,6 +44,11 @@
         "path" : "lista-pokemon",
         "icon" : "accessibility",
         "texto": "Pokemon"
+      },
+      {
+        "path" : "slider",
+        "icon" : "accessibility",
+        "texto": "Slider"
       }
   ]
 }
